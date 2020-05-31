@@ -1,5 +1,5 @@
 public class classDemo {
-    // testing
+    // This is a note
     int j;
     double w;
 }
