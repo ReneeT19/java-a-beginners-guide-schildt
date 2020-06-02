@@ -1,0 +1,1 @@
+A practice that copies an array to another one by using length member
