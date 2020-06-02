@@ -1,0 +1,1 @@
+A project about using length member in an array
