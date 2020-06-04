@@ -1,6 +1,7 @@
 public class StringArrays {
     public static void main(String[] args) {
         String[] strs = {"This", "is", "a", "test"};
+        String strs1 = "This is good.";
 
         System.out.println("Original array: ");
         for(String s : strs)
@@ -15,5 +16,8 @@ public class StringArrays {
         for(String s : strs)
             System.out.print(s + " ");
 
+        //construct a substring
+        String substr = strs1.substring(0, 5); // the start and end point as a character
+        System.out.println("substr: " + substr);
     }
 }
