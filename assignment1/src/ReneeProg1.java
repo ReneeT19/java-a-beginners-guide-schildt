@@ -1,65 +1,63 @@
-class YIDissector {
+class CTDissector {
     //fields
-    String colonSeparated, countryCode;
-    int areaCode, prefix, number;
+    private String colonSeparated, countryCode, returnSection;
+    private int areaCode, prefix, number, idx, idx2, idx3;
 
     //constructor
-    YIDissector(String c) {
-        colonSeparated = c;
+    public CTDissector(String fullValue) {
+        colonSeparated = fullValue;
+
+        int numberLength = colonSeparated.length();
+
+        idx = colonSeparated.indexOf(':');
+        idx2 = colonSeparated.indexOf(':', idx + 1);
+        idx3 = colonSeparated.lastIndexOf(':');
+
+        //use Integer.parseInt to convert an integer to a string type
+        countryCode = colonSeparated.substring(0, idx);
+        areaCode = Integer.parseInt(colonSeparated.substring(idx + 1, idx2));
+        prefix = Integer.parseInt(colonSeparated.substring(idx2 + 1, idx3));
+        number = Integer.parseInt(colonSeparated.substring(idx3 + 1, numberLength));
     }
+
 
     //methods
-    public void getPhoneNumber() {
-        int index = 1;
-        switch (index) {
+    public String getPhoneNumber() {
+        return colonSeparated;
+    }
+
+    public String getPhoneNumber(int input) {
+        switch (input) {
             case 1:
-                System.out.println(countryCode);
+                returnSection = countryCode;
                 break;
             case 2:
-                System.out.println(areaCode);
+                returnSection = Integer.toString(areaCode);
                 break;
             case 3:
-                System.out.println(prefix);
+                returnSection = Integer.toString(prefix);
                 break;
             case 4:
-                System.out.println(number);
+                returnSection = Integer.toString(number);
                 break;
             default:
-                System.out.println(colonSeparated);
+                returnSection = " ";
                 break;
         }
+        return returnSection;
     }
 }
+
 public class ReneeProg1 {
     public static void main(String[] args) {
-//      YIDissector phoneNumber = new YIDissector("1:919:882:5000");
-        String phoneNumber = "1:919:882:5000";
-        int idx, idx2, idx3;
-        int numberLength = phoneNumber.length();
-        System.out.println(numberLength);
-
-        idx = phoneNumber.indexOf(':');
-        System.out.println("Index of first occurrence of : is: " + idx);
-        idx2 = phoneNumber.indexOf(':', idx+1);
-        System.out.println("Index of second occurrence of : is: " + idx2);
-        idx3 = phoneNumber.lastIndexOf(':');
-        System.out.println("Index of last occurrence of : is: " + idx3);
+      CTDissector phoneNumber = new CTDissector("1:919:882:5000");
 
 
-        String countryCode = phoneNumber.substring(0, idx);
-        System.out.println("country code is: " + countryCode);
-        String areaCode = phoneNumber.substring(idx+1, idx2);
-        System.out.println("area code is: " + areaCode);
-        String prefix = phoneNumber.substring(idx2+1, idx3);
-        System.out.println("prefix is: " + prefix);
-        String number = phoneNumber.substring(idx3+1, numberLength);
-        System.out.println("number is: " + number);
-
-//        System.out.println(phoneNumber.getPhoneNumber());
-//        System.out.println(phoneNumber.getPhoneNumber(4));
-//        System.out.println(phoneNumber.getPhoneNumber(1));
-//        System.out.println(phoneNumber.getPhoneNumber(3));
-//        System.out.println(phoneNumber.getPhoneNumber(2));
+        System.out.println(phoneNumber.getPhoneNumber());
+        System.out.println(phoneNumber.getPhoneNumber(4));
+        System.out.println(phoneNumber.getPhoneNumber(1));
+        System.out.println(phoneNumber.getPhoneNumber(3));
+        System.out.println(phoneNumber.getPhoneNumber(2));
         }
 
     }
