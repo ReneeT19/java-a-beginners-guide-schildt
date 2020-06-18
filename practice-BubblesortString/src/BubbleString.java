@@ -1,6 +1,6 @@
 public class BubbleString {
             public static void main(String[] args) {
-                String[] str = {"e", "s", "o", "n", "a"};   //can't be words but single letters
+                String[] str = {"soren", "is", "a", "cutie", "pie"};   //sort by the first letter
                 String t;
 
                 //display original array
