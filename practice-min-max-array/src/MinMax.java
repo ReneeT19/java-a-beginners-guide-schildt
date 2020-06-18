@@ -16,11 +16,15 @@ public class MinMax {
         nums[8] = 287;
         nums[9] = 49;
         min = max = nums[0];  //you can have both min and max in one project
-        for(int i = 1; i < 10; i++) { //i has to be less than 10 because that's what's defined the size in the beginning
-            //otherwise it's called an overrun or underrun error
-            //usually i starts at 0, but at 1 here because it's a min max problem so comparison exists
-            if(nums[i] < min) min = nums[i];
-            if(nums[i] > max) max = nums[i];
+//        for(int i = 1; i < 10; i++) { //i has to be less than 10 because that's what's defined the size in the beginning
+//            //otherwise it's called an overrun or underrun error
+//            //usually i starts at 0, but at 1 here because it's a min max problem so comparison exists
+//            if(nums[i] < min) min = nums[i];
+//            if(nums[i] > max) max = nums[i];
+//        }
+        for(int x: nums) {
+            if(x < min) min = x;
+            if(x> max) max = x;
         }
         System.out.println("The min is " + min  + " and the max is " + max);
     }
