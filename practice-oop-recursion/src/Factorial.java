@@ -1,4 +1,5 @@
 public class Factorial {
+
     int factR(int n) {
         int result;
         if(n == 1) return 1;
