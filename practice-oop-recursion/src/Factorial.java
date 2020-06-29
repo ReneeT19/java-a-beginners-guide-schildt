@@ -5,6 +5,7 @@ public class Factorial {
         result = factR(n-1)*n;      //execute the recursive call to factR()
         return result;
     }
+
     //another way to do it is:
 //    int factI(int n) {
 //    int t, result;
