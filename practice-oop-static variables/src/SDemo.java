@@ -13,5 +13,8 @@ public class SDemo {
         System.out.println(ob1.sum() + " " + ob2.sum());
 
         System.out.println(StaticDemo.valDiv2());
+
+    StaticDemo ob = new StaticDemo();
+    System.out.println(StaticDemo.rootOf2);
     }
 }
