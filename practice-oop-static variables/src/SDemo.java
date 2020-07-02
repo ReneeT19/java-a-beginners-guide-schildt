@@ -11,5 +11,7 @@ public class SDemo {
         System.out.println(ob1.sum() + " " + ob2.sum());
         StaticDemo.y = 100;
         System.out.println(ob1.sum() + " " + ob2.sum());
+
+        System.out.println(StaticDemo.valDiv2());
     }
 }
