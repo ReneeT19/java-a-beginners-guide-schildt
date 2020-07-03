@@ -3,8 +3,8 @@ public class QSDemo {
         char a[] = {'d', 'x', 'a', 'r', 'p', 'j', 'i'};
         int i;
         System.out.println("original array: ");
-        for (i = 0; i < a.length; i++) {
-            System.out.print(a);
+        for (i = 0; i < a.length; i++)
+            System.out.print(a[i]);
             System.out.println();
 
             Quicksort.qsort(a);
@@ -14,4 +14,3 @@ public class QSDemo {
             }
         }
     }
-}
