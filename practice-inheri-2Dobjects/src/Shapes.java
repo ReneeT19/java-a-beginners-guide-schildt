@@ -4,12 +4,12 @@ public class Shapes {
         Triangle t2 = new Triangle();
         Rectangle r1 = new Rectangle();
 
-        t1.width = 4.0;
-        t1.height = 4.0;
+        t1.setWidth(4.0);
+        t1.setHeight(4.0);
         t1.style = "filled";        //all members of Triangle are available to Triangle objects, even those inherited from TwoDShape
 
-        t2.width = 8.0;
-        t2.height = 12.0;
+        t2.setWidth(8.0);
+        t2.setHeight(12.0);
         t2.style = "outlined";
 
         System.out.println("Info for t1: ");
@@ -26,8 +26,8 @@ public class Shapes {
 
         System.out.println();
 
-        r1.width = 10.0;
-        r1.height = 10.0;
+        r1.setWidth(10.0);
+        r1.setHeight(10.0);
 
         System.out.println("Info for r1: ");
         System.out.println(r1.isSquare());

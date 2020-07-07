@@ -1,9 +1,9 @@
 public class Rectangle extends TwoDShape{
     boolean isSquare() {
-        if(width == height) return true;
+        if(getHeight() == getHeight()) return true;
         return false;
     }
     double area() {
-        return width * height;
+        return getHeight() * getHeight();
     }
 }
