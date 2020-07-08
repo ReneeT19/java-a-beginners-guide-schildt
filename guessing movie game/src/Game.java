@@ -7,7 +7,8 @@ public class Game {
     private String selectedMovie;
     private char letter;
     private boolean[] guessedLetters = new boolean[26];
-    private static char incorrectGuesses;
+    //private static char incorrectGuesses;
+    private String incorrectGuesses = "";
     private boolean rightGuess = false;
     private int wrongGuesses;
     private boolean hasNoDashes;
@@ -83,7 +84,7 @@ public class Game {
             char incorrectGuesses = ' ';
             if (guessedLetters[i]) {
                 if (!rightGuess) {
-                    incorrectGuesses = (char) (i + 'a');
+                    //incorrectGuesses = (char) (i + 'a');
                     System.out.print(incorrectGuesses + " ");
                 }
             }
@@ -102,14 +103,16 @@ public class Game {
         }
         if (!rightGuess) {
             wrongGuesses += 1;
-
+            incorrectGuesses += letter + " ";
+            System.out.print(incorrectGuesses + " ");
         }
         return rightGuess;
     }
 
     public void numOfWrongs() {
-        System.out.print("You have guessed " + wrongGuesses + " wrong letter(s): ");
-        checkIfGuessed(letter);
+        System.out.print("You have guessed " + wrongGuesses + " wrong letter(s): " + incorrectGuesses);
+        System.out.println();
+        //checkIfGuessed(letter);
     }
 
     public void wordSoFar() {
