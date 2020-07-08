@@ -5,6 +5,7 @@ public class Shapes {
         Triangle t2 = new Triangle("outlined", 8.0, 12.0);
         Triangle t3 = new Triangle(4.0);
         Rectangle r1 = new Rectangle();
+        ColorTriangle c1 = new ColorTriangle("Blue", "outlined", 8.0, 12.0);
 
 //        t1.setWidth(4.0);
 //        t1.setHeight(4.0);
@@ -42,5 +43,12 @@ public class Shapes {
         System.out.println(r1.isSquare());
         r1.showDim();
         System.out.println("Area is: " + r1.area());
+
+        //ColorTriangle object can call methods defined by itself and its superclasses.
+        System.out.println("Info for c1: ");
+        c1.showStyle();
+        c1.showDim();
+        c1.showColor();
+        System.out.println("Area is: " + c1.area());
     }
 }

@@ -30,6 +30,7 @@ public class TwoDShape {
     void setHeight(double h) {
         height = h;
     }
+
     void showDim() {
         System.out.println("Width and height are " + width + " and " + height);
     }
