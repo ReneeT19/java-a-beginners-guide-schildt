@@ -81,7 +81,6 @@ public class Game {
 
     public void checkIfGuessed(char letter) {
         for (int i = 0; i < guessedLetters.length; i++) {
-            char incorrectGuesses = ' ';
             if (guessedLetters[i]) {
                 if (!rightGuess) {
                     //incorrectGuesses = (char) (i + 'a');
@@ -104,7 +103,7 @@ public class Game {
         if (!rightGuess) {
             wrongGuesses += 1;
             incorrectGuesses += letter + " ";
-            System.out.print(incorrectGuesses + " ");
+//            System.out.print(incorrectGuesses + " ");
         }
         return rightGuess;
     }
@@ -122,7 +121,9 @@ public class Game {
         for (int i = 0; i < selectedMovieCharArray.length; i++) {
             if (selectedMovieCharArray[i] != ' ' && guessedLetters[selectedMovieCharArray[i] - 'a']) {   //map a-z to 0-25
                 System.out.print(selectedMovieCharArray[i]);
-            } else {
+            } else if(selectedMovieCharArray[i] == ' ') {
+                System.out.print(" ");
+            }  else {
                 System.out.print("_");
                 hasNoDashes = false;
             }
