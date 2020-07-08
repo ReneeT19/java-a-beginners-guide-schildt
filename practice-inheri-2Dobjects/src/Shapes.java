@@ -7,6 +7,19 @@ public class Shapes {
         Rectangle r1 = new Rectangle();
         ColorTriangle c1 = new ColorTriangle("Blue", "outlined", 8.0, 12.0);
 
+        TwoDShape[] shapes = new TwoDShape[5];
+        shapes[0] = new Triangle("outlined", 8.0, 12.0);
+        shapes[1] = new Rectangle(10);
+        shapes[2] = new Rectangle(10,4);
+        shapes[3] = new Triangle(7.0);
+        shapes[4] = new TwoDShape(10,20,"generic");
+
+        for(int i = 0; i < shapes.length; i++) {
+        System.out.println("Object is: " + shapes[i].getName());
+        System.out.println("Area is: " + shapes[i].area());     //the proper version of area() is called for each shape
+        System.out.println();
+        }
+
 //        t1.setWidth(4.0);
 //        t1.setHeight(4.0);
 //        t1.style = "filled";        //all members of Triangle are available to Triangle objects, even those inherited from TwoDShape
@@ -51,4 +64,5 @@ public class Shapes {
         c1.showColor();
         System.out.println("Area is: " + c1.area());
     }
+
 }
