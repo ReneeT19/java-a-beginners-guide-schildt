@@ -5,6 +5,7 @@ public class Shapes {
         Triangle t2 = new Triangle("outlined", 8.0, 12.0);
         Triangle t3 = new Triangle(4.0);
         Rectangle r1 = new Rectangle();
+        Circle ci1 = new Circle(4);
         ColorTriangle c1 = new ColorTriangle("Blue", "outlined", 8.0, 12.0);
 
         TwoDShape[] shapes = new TwoDShape[5];
@@ -63,6 +64,11 @@ public class Shapes {
         c1.showDim();
         c1.showColor();
         System.out.println("Area is: " + c1.area());
+
+        System.out.println("Info for ci1: ");
+        ci1.showDim();
+        System.out.println("Area is: " + ci1.area());
     }
+
 
 }

@@ -22,7 +22,4 @@ public class Rectangle extends TwoDShape{
     double area() {
         return getHeight() * getHeight();
     }
-
-
-
     }
